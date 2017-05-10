@@ -6,19 +6,20 @@ angular.module('hikingApp')
    restrict: 'E',
    scope: {
      trails: '<',
-     onClick: '<'
+     onClick: '<',
+     filter: '&'
    },
-   controller: () => {
+   controller: ($scope) => {
 
      //runs through trail array and sorts each object by the search value.
      //when we call the function on the click, we will need to pass in both parameters
-     this.filter = (trails, searchVal) => {
+     $scope.filter = (trails, searchVal) => {
        return trails.sort(function(obj1, obj2){
          return obj1[searchVal] - obj2[searchVal];
        });
      };
    },
-   controllerAs: 'ctrl',
+   controllerAs: 'takeAHike',
    bindToController: true,
    templateUrl: '../templates/takeAHike.html'
  };
