@@ -7,6 +7,6 @@ angular.module('hikingApp')
     },
     controllerAs: 'ctrl',
     bindToController: true,
-    templateUrl: '../templates/user.html'
+    templateUrl: 'clients/templates/user.html'
   };
 });

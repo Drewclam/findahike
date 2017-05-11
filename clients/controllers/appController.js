@@ -1,6 +1,9 @@
 angular.module('hikingApp')
 .controller('appController', ($scope, getHikeApiService, getHikeService, postHikeService) => {
 
+  // init view
+  $scope.viewState = 'user';
+
   // control views
   $scope.changeViewState = page => {
     $scope.viewState = page;
